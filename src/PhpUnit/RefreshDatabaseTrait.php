@@ -37,6 +37,7 @@ trait RefreshDatabaseTrait
 
         $container = static::$container ?? static::$kernel->getContainer();
         $container->get('doctrine')->getConnection(static::$connection)->beginTransaction();
+
         return $kernel;
     }
 

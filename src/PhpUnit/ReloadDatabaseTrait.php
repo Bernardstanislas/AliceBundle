@@ -27,6 +27,7 @@ trait ReloadDatabaseTrait
         static::ensureKernelTestCase();
         $kernel = parent::bootKernel($options);
         static::populateDatabase();
+
         return $kernel;
     }
 }
